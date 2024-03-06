@@ -2,6 +2,18 @@
 using namespace std;
 
 int main() {
-  int a, b;
-  cin >> a >> b;
+  string s;
+  cin >> s;
+  bool ans = true;
+  for (int i = 0; i < s.length(); i++) {
+    if ((i == 0 && !isupper(s.at(i))) || (i != 0 && isupper(s.at(i)))) {
+      ans = false;
+      break;
+    }
+  }
+  if (ans) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
+  }
 }

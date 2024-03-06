@@ -2,6 +2,12 @@
 using namespace std;
 
 int main() {
-  int a, b;
-  cin >> a >> b;
+  int a, b, d;
+  cin >> a >> b >> d;
+  int i = a;
+  while (i != b) {
+    cout << i << " ";
+    i += d;
+  }
+  cout << b << endl;
 }
