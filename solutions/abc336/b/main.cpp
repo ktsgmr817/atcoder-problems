@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
+using ll = unsigned long long;
 #define rep(i, n) for (int i = 0; (i) < (n); ++(i))
 #define all(...) std::begin(__VA_ARGS__), std::end(__VA_ARGS__)
 #define rall(...) std::rbegin(__VA_ARGS__), std::rend(__VA_ARGS__)
@@ -17,17 +17,14 @@ inline string in_str() {
 
 int main() {
   ll n = in_ll();
-  ll x = 0;
-  ll y = 0;
-  rep(i, n) {
-    x += in_ll();
-    y += in_ll();
+  bitset<64> bs(n);
+  ll count = 0;
+  rep(i, bs.size()) {
+    if (bs.test(i)) {
+      break;
+    } else {
+      count++;
+    }
   }
-  if (x > y) {
-    cout << "Takahashi" << endl;
-  } else if (x < y) {
-    cout << "Aoki" << endl;
-  } else {
-    cout << "Draw" << endl;
-  }
+  std::cout << count << endl;
 }

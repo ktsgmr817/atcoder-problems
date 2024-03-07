@@ -17,17 +17,7 @@ inline string in_str() {
 
 int main() {
   ll n = in_ll();
-  ll x = 0;
-  ll y = 0;
-  rep(i, n) {
-    x += in_ll();
-    y += in_ll();
-  }
-  if (x > y) {
-    cout << "Takahashi" << endl;
-  } else if (x < y) {
-    cout << "Aoki" << endl;
-  } else {
-    cout << "Draw" << endl;
-  }
+  cout << "L";
+  rep(i, n) { cout << "o"; }
+  cout << "ng" << endl;
 }
