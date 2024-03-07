@@ -8,13 +8,5 @@ inline ll in_ll() {ll x; cin >> x; return x;}
 inline string in_str() {string x; cin >> x; return x;}
 
 int main() {
-  string s = in_str();
-  rep(i, s.length()) {
-    if (i == s.length()-1) {
-      cout << 4;
-      continue;
-    }
-    cout << s.at(i);
-  }
-  cout << endl;
+  ll a = in_ll();
 }
