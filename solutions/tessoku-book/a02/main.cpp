@@ -8,5 +8,14 @@ inline ll in_ll() {ll x; cin >> x; return x;}
 inline string in_str() {string x; cin >> x; return x;}
 
 int main() {
-  ll a = in_ll();
+  ll n = in_ll();
+  ll x = in_ll();
+  rep(i, n) {
+    ll a = in_ll();
+    if (a == x) {
+      cout << "Yes" << endl;
+      return 0;
+    }
+  }
+  cout << "No" << endl;
 }
