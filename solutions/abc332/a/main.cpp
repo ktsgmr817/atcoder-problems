@@ -9,4 +9,5 @@ inline string in_str() {string x; cin >> x; return x;}
 
 int main() {
   ll a = in_ll();
+  
 }
