@@ -16,20 +16,13 @@ inline string in_str() {
 }
 
 int main() {
-  ll d = in_ll();
-  ll n = in_ll();
-  vector<ll> sum(d, 0);
-  rep(i, n) {
-    ll l = in_ll();
-    ll r = in_ll();
-    sum.at(l - 1) += 1;
-    if (r != d) {
-      sum.at(r) -= 1;
-    }
+  vector<ll> a;
+  while (true) {
+    a.push_back(in_ll());
+    if (a.at(a.size() - 1) == 0)
+      break;
   }
-  ll total = 0;
-  rep(i, d) {
-    total += sum.at(i);
-    cout << total << endl;
+  for (ll i = a.size() - 1; i >= 0; i--) {
+    cout << a.at(i) << endl;
   }
 }

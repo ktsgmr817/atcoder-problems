@@ -2,7 +2,13 @@
     "files.associations": {
         "ostream": "cpp",
         "cmath": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "regex": "cpp",
+        "span": "cpp",
+        "chrono": "cpp",
+        "type_traits": "cpp",
+        "string": "cpp",
+        "string_view": "cpp"
     },
     "C_Cpp.clang_format_style": "{ BreakBeforeBraces: Attach, IndentWidth: 2 }"
 }
