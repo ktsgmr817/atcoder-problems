@@ -19,6 +19,7 @@ int main() {
   ll n = in_ll();
   ll k = in_ll();
   vector<ll> a(n);
+  vector<ll> r(n);
   vector<ll> cum(n);
   ll tmp = 0;
   rep(i, n) {
@@ -28,30 +29,28 @@ int main() {
     tmp += a_i;
   }
 
-  ll r = 1;
-  ll answer = 0;
-  rep(i, n) {
-    ll sum;
+  // ll r = 0;
+  for (ll i = 0; i < n; i++) {
     if (i == 0)
-      sum = cum.at(r);
+      r.at(i) = 0;
     else
-      sum = cum.at(r) - cum.at(i);
-    if (r == n - 1) {
-      answer += r - i + 1;
-      continue;
-    }
-    while (cum.at(r) - cum.at(i) <= k) {
+      r.at(i) = r.at(i - 1);
+
+    while (r.at(i) < n) {
+      ll sum;
       if (i == 0)
-        sum = cum.at(r);
+        sum = cum.at(r.at(i));
       else
-        sum = cum.at(r) - cum.at(i);
-      if (r != n - 1) {
-        r++;
+        sum = cum.at(r.at(i)) - cum.at(i - 1);
+      if (sum <= k) {
+        r.at(i)++;
+      } else {
+        break;
       }
-      answer++;
     }
-    cout << i << " " << r << endl;
-    cout << answer << endl;
   }
+
+  ll answer = 0;
+  rep(i, n) { answer += r.at(i) - i; }
   cout << answer << endl;
 }
