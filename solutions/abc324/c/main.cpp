@@ -16,11 +16,20 @@ inline string in_str() {
 }
 
 int main() {
-  ll h = in_ll();
-  ll w = in_ll();
-
-  rep(i, h) {
-    string s = in_str();
-    rep(i, w) { s.at(i); }
+  ll N = in_ll();
+  string T = in_str();
+  unordered_set<string> t_set;
+  // ルール1
+  t_set.insert(T);
+  // ルール2
+  string tmp;
+  rep(i, T.size()) {
+    tmp = T;
+    t_set.insert(tmp.erase(i, 1));
+  }
+  // ルール3
+  rep(i, T.size()) {
+    tmp = T;
+    t_set.insert(tmp.erase(i, 1));
   }
 }

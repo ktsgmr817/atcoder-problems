@@ -16,11 +16,12 @@ inline string in_str() {
 }
 
 int main() {
-  ll h = in_ll();
-  ll w = in_ll();
-
-  rep(i, h) {
-    string s = in_str();
-    rep(i, w) { s.at(i); }
+  ll n = in_ll();
+  while (n % 2 == 0) {
+    n /= 2;
   }
+  while (n % 3 == 0) {
+    n /= 3;
+  }
+  cout << (n == 1 ? "Yes\n" : "No\n");
 }
